@@ -3,9 +3,11 @@ from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from urllib.error import HTTPError
 
+api_token = "API_TOKEN"
+
 class BotDialog:
     def __init__(self):
-        self.bot_token = "205377807:AAGBPO4fXIFCHDcUtDhLsUyitgJq0r5dhkQ"
+        self.bot_token = api_token
         self.getUpdates = "https://api.telegram.org/bot" + self.bot_token + "/getUpdates"
         self.sendMessage = "https://api.telegram.org/bot" + self.bot_token + "/sendMessage"
         self.p_getUpdates = {'limit':'1', 'offset':'-1'}
